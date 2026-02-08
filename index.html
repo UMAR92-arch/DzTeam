@@ -12,11 +12,15 @@
     <style>
         body {
             font-family: 'Space Grotesk', sans-serif;
-            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://vkplay.ru/hotbox/content_files/article/2019/12/25/95796a9bbd854f68841d837a44792918.jpg');
+            background-color: #000;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://vkplay.ru/hotbox/content_files/article/2019/12/25/95796a9bbd854f68841d837a44792918.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
             color: #ffffff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
             scrollbar-width: thin;
             scrollbar-color: #4ade80 #1a1a1a;
         }
@@ -28,24 +32,13 @@
             border: 4px solid #000;
             box-shadow: inset -4px -4px #555, inset 4px 4px #eee;
         }
-        .mc-button {
-            image-rendering: pixelated;
-            background: #7c7c7c;
-            border: 4px solid #000;
-            box-shadow: inset -4px -4px #555, inset 4px 4px #eee;
-            transition: all 0.1s;
-        }
-        .mc-button:active {
-            box-shadow: inset 4px 4px #555, inset -4px -4px #eee;
-            transform: translateY(2px);
-        }
         .glass {
             background: rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        /* Legendary Member Styles */
+        /* Member Custom Styles */
         .style-shoxa {
             font-weight: 900;
             font-style: italic;
@@ -57,6 +50,7 @@
             -webkit-text-fill-color: transparent;
             filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.5));
             display: inline-block;
+            word-break: break-all;
         }
         .style-darknight {
             font-weight: 900;
@@ -66,6 +60,7 @@
             -webkit-text-fill-color: transparent;
             filter: drop-shadow(0 0 5px rgba(0, 0, 255, 0.5));
             display: inline-block;
+            word-break: break-all;
         }
         .style-leo {
             font-weight: 900;
@@ -73,6 +68,7 @@
             color: #ffff00;
             text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
             display: inline-block;
+            word-break: break-all;
         }
         .style-zen {
             font-weight: 900;
@@ -81,6 +77,7 @@
             filter: drop-shadow(0 0 12px rgba(255, 69, 0, 0.9));
             animation: pulse-glow 1.5s infinite alternate;
             display: inline-block;
+            word-break: break-all;
         }
 
         @keyframes pulse-glow {
@@ -96,19 +93,23 @@
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
+
+        /* Prevents horizontal overflow on small screens */
+        main { overflow-x: hidden; }
     </style>
 <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.474.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
+    "lucide-react": "https://esm.sh/lucide-react@0.474.0",
+    "react-dom/": "https://esm.sh/react-dom@19.2.4/",
+    "react/": "https://esm.sh/react@19.2.4/",
+    "react": "https://esm.sh/react@19.2.4"
   }
 }
 </script>
 </head>
 <body>
     <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
