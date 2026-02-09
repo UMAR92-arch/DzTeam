@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DZ TEAM | Official Website</title>
+    <title>DZ TEAM | Rasmiy Sayt</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
         body {
             font-family: 'Space Grotesk', sans-serif;
             background-color: #000;
-            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://vkplay.ru/hotbox/content_files/article/2019/12/25/95796a9bbd854f68841d837a44792918.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://vkplay.ru/hotbox/content_files/article/2019/12/25/95796a9bbd854f68841d837a44792918.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -21,81 +21,111 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            scrollbar-width: thin;
-            scrollbar-color: #4ade80 #1a1a1a;
+            overflow-x: hidden;
         }
+        
         .font-minecraft {
             font-family: 'Press Start 2P', cursive;
         }
-        .mc-block {
-            image-rendering: pixelated;
-            border: 4px solid #000;
-            box-shadow: inset -4px -4px #555, inset 4px 4px #eee;
+
+        /* Maxsus Logotip Dizayni */
+        .dz-logo-brand {
+            font-family: 'Press Start 2P', cursive;
+            background: linear-gradient(90deg, #ff3131 0%, #3182ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(255, 49, 49, 0.4));
+            transition: filter 1.2s ease;
         }
+        .dz-logo-brand:hover {
+            filter: drop-shadow(0 0 20px rgba(49, 130, 255, 0.8));
+        }
+
+        /* Sekin va Silliq Effektli Tugma */
+        .elegant-button {
+            position: relative;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .elegant-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
+            filter: brightness(1.1);
+        }
+
+        /* Matnlar uchun Yumshoq va Sekin Effekt */
+        .elegant-text-hover {
+            transition: all 0.8s ease;
+            cursor: default;
+        }
+        .elegant-text-hover:hover {
+            color: #4ade80;
+            text-shadow: 0 0 20px rgba(74, 222, 128, 0.5);
+            letter-spacing: 0.8px;
+        }
+
+        /* Karta (Card) uchun Sekin Effekt */
+        .elegant-card {
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            overflow: hidden; 
+            border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+        }
+        .elegant-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(74, 222, 128, 0.4);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Skin rasmlari uchun alohida sekin effekt */
+        .skin-hover {
+            transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .elegant-card:hover .skin-hover {
+            transform: scale(1.1) translateY(-8px);
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.6));
+        }
+
         .glass {
-            background: rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(16px);
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        /* Member Custom Styles */
+
+        /* Legendary Member Text Styles */
         .style-shoxa {
             font-weight: 900;
-            font-style: italic;
-            text-decoration: underline;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 4px;
             background: linear-gradient(90deg, #ff0000, #ff8c00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.5));
-            display: inline-block;
-            word-break: break-all;
+            filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.4));
         }
         .style-darknight {
             font-weight: 900;
-            font-style: italic;
-            background: linear-gradient(90deg, #ff0000, #0000ff);
+            background: linear-gradient(90deg, #3182ff, #ff3131);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 5px rgba(0, 0, 255, 0.5));
-            display: inline-block;
-            word-break: break-all;
-        }
-        .style-leo {
-            font-weight: 900;
-            font-style: italic;
-            color: #ffff00;
-            text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
-            display: inline-block;
-            word-break: break-all;
-        }
-        .style-zen {
-            font-weight: 900;
-            font-style: italic;
-            color: #ff4500;
-            filter: drop-shadow(0 0 12px rgba(255, 69, 0, 0.9));
-            animation: pulse-glow 1.5s infinite alternate;
-            display: inline-block;
-            word-break: break-all;
-        }
-
-        @keyframes pulse-glow {
-            from { filter: drop-shadow(0 0 8px rgba(255, 69, 0, 0.6)); transform: scale(1); }
-            to { filter: drop-shadow(0 0 20px rgba(255, 69, 0, 1)); transform: scale(1.05); }
+            filter: drop-shadow(0 0 5px rgba(49, 130, 255, 0.4));
         }
 
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-20px); }
             100% { transform: translateY(0px); }
         }
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
+        .animate-float-slow {
+            animation: float 6s ease-in-out infinite;
         }
 
-        /* Prevents horizontal overflow on small screens */
-        main { overflow-x: hidden; }
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 10px; border: 2px solid #000; }
     </style>
 <script type="importmap">
 {
